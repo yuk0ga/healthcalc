@@ -5,7 +5,7 @@
     Health Calculator
   </title>
   <link rel="stylesheet" type="text/css" href="bmi.css">
-  <script type="text/javascript" src="bmi.js"></script>
+
 </head>
 <body>
   <h1>
@@ -14,19 +14,27 @@
   <p>
     BMI、基礎代謝、一日のPFC摂取量の目安を計算します。
   </p>
-  <form name="frm">
-    性別：<input type="radio" name="gender" value="male" checked="checked" required>男</input>
-      <input type="radio" name="gender" value="female" required>女</input>
+    性別：<input type="radio" id="male" name="gender" value="male" checked="checked" required>男</input>
+      <input type="radio" id="female" name="gender" value="female" required>女</input>
       </br></br>
-    年齢：<input type="number" name="age" required></input> 歳
+    年齢：<input type="number" id="age" required></input> 歳
   </br></br>
-    身長：<input type="number" name="height" required></input> cm
+    身長：<input type="number" id="height" required></input> m
   </br></br>
-    体重：<input type="number" name="weight" required></input> kg
+    体重：<input type="number" id="weight" required></input> kg
   </br></br>
     <button name="btn" id="btn">計算</button>
-
-  </form>
   <button name="clr" id="clr">クリア</button>
+</br></br>
+BMI：<input type=number id="bmi" readonly></input>
+</br></br>
+基礎代謝：<input type=number id="kcal" readonly></input> kcal
+</br></br>
+Protein：<input type=number id="protein" readonly></input> g
+</br></br>
+Fat：<input type=number id="fat" readonly></input> g
+</br></br>
+Carbohydrate：<input type=number id="carb" readonly></input> g
+<script type="text/javascript" src="bmi.js"></script>
 </body>
 </html>
